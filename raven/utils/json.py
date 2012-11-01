@@ -11,12 +11,8 @@ from __future__ import absolute_import
 import datetime
 import uuid
 
-try:
-    import simplejson as json
-    JSONDecodeError = json.JSONDecodeError
-except ImportError:
-    import json
-    JSONDecodeError = ValueError
+import json
+JSONDecodeError = ValueError
 
 
 class BetterJSONEncoder(json.JSONEncoder):
